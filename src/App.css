@@ -1,6 +1,5 @@
 section {
-  height: 500px;
-  background-color: gray;
+  min-height: 500px;
 }
 
 .App {
@@ -22,4 +21,69 @@ section {
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+
+.Member-panel {
+  height: 370px;
+}
+
+.Member-panel-body {
+  background-image: url(/hangai.png);
+  background-color: rgba(61, 135, 135, 0.5);
+  color: white;
+  height: 190px;
+  padding-bottom: 10px;
+}
+
+.Member-panel-body-photo {
+  margin: auto;
+  width: 95px;
+  height: auto;
+  padding: 2px;
+}
+
+.Member-panel-body-title {
+}
+
+.Member-panel-body-description {
+  margin-bottom: 0;
+}
+
+.Member-panel-footer {
+  height: 170px;
+  background-color: #242933;
+}
+
+.Member-panel-footer-description {
+  padding: 10px;
+  color: white;
+  font-size: small;
+}
+
+.News-header {
+  background-image: url(/hangai.png);
+  min-height: 150px;
+}
+
+.News-body {
+  background-color: #333645;
+}
+
+.News-body-list-item {
+  background-color: #3C4257;
+  height: 160px;
+}
+
+.News-body-list-item-icon {
+  width: 100px;
+  height: auto;
+  margin: auto;
+}
+
+.News-body-list-item-date {
+  color: white;
+}
+
+.News-body-list-item-description {
+  color: white;
 }
