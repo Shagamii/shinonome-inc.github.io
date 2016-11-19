@@ -24,9 +24,7 @@ class App extends Component {
         <p className="Member-panel-body-description"> {jobTitle} </p>
       </div>
       <div className="Member-panel-footer">
-        <p className="Member-panel-footer-description text-left">
-          {description}
-        </p>
+        <p className="Member-panel-footer-description text-left"> {description} </p>
       </div>
     </div>
   );
@@ -62,9 +60,9 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <div className="container">
-            <nav className="navbar-left">
+            <a href="/">
               <img src={ logo } className="App-logo" alt="logo" />
-            </nav>
+            </a>
             <nav className="navbar-right">
               <ul className="list list-unstyled list-inline">
                 <li> <a href="#mission">mission</a> </li>
@@ -107,15 +105,29 @@ class App extends Component {
             {this.renderSectionHeader("/hangai.png", "MEMBERS")}
             <div className="row">
               <div className="col-xs-4">
-                { this.renderMemberPanel(
+                {this.renderMemberPanel(
                   "/hangai.png",
                   "Seiichiro Hangai",
                   "Outside Director",
                   "1975年東京理科大学工学部電気工学科卒，1981年同大学大学院理工学研究科博士課程了，工学博士。現在、東京理科大学理事ならびに工学部電気工学科教授。1996年～97年に在外研究員としてスタンフォード大学に滞在、2010年～2014年に工学部長。生体認証に関わるISO/IEC JTC1 SC37データフォーマットの国際標準化に貢献。文部科学省、人事院などの委員を歴任。"
                 )}
+              </div>
+              <div className="col-xs-4">
+                {this.renderMemberPanel(
+                  "/katayori.png",
+                  "Katayori Hoge",
+                  "Outside Director",
+                  "1975年東京理科大学工学部電気工学科卒，1981年同大学大学院理工学研究科博士課程了，工学博士。現在、東京理科大学理事ならびに工学部電気工学科教授。1996年～97年に在外研究員としてスタンフォード大学に滞在、2010年～2014年に工学部長。生体認証に関わるISO/IEC JTC1 SC37データフォーマットの国際標準化に貢献。文部科学省、人事院などの委員を歴任。"
+                )}
+              </div>
+              <div className="col-xs-4">
+                {this.renderMemberPanel(
+                  "/makino.png",
+                  "Emi Makino",
+                  "Outside Director",
+                  "1975年東京理科大学工学部電気工学科卒，1981年同大学大学院理工学研究科博士課程了，工学博士。現在、東京理科大学理事ならびに工学部電気工学科教授。1996年～97年に在外研究員としてスタンフォード大学に滞在、2010年～2014年に工学部長。生体認証に関わるISO/IEC JTC1 SC37データフォーマットの国際標準化に貢献。文部科学省、人事院などの委員を歴任。"
+                )}
                </div>
-              <div className="col-xs-4"></div>
-              <div className="col-xs-4"></div>
             </div>
           </section>
           <sections id="products">
@@ -151,37 +163,18 @@ class App extends Component {
           <section id="about">
             {this.renderSectionHeader("/hangai.png", "ABOUT")}
             <div className="About-body">
-              <div className="row">
-                <dic className="col-xs-5">
-                  <p>
-                    会社名: 株式会社Shinonome(Shinonome inc.)
-                    設立日: 2016年8月25日
-                    資本金: 6,200,000円　
-                  </p>
-                  <img src={logo} className="App-logo" alt="logo" />
-                </dic>
-                <dic className="col-xs-3">
-                  <h2>役員</h2>
-                  <ul className="list list-unstyled">
-                    <li>CEO 種市</li>
-                    <li>CTO 高橋</li>
-                    <li>C0O 有馬</li>
-                  </ul>
-                </dic>
-                <dic className="col-xs-4">
-                  <p>
-                    所在地: &post; 112-0005
-                    東京都文京区水道1-5-16-802
-                  </p>
-                </dic>
-              </div>
+              <ul className="list list-unstyled">
+                <li> 会社名: 株式会社Shinonome (Shinonome inc.) </li>
+                <li> 設立日: 2016年8月25日 </li>
+                <li> 資本金: 6,200,000円　</li>
+                <li> 所在地: 〒112-0005 東京都文京区水道1-5-16-802 </li>
+              </ul>
+              <img src={logo} className="App-logo" alt="logo" />
             </div>
           </section>
         </div>
         <footer className="App-footer">
-          <p>
-            &copy; 2016 Shinonome inc. All rights reserved
-          </p>
+          <p> &copy; 2016 Shinonome inc. All rights reserved </p>
         </footer>
       </div>
     );
