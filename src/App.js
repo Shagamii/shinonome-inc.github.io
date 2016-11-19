@@ -39,29 +39,39 @@ class App extends Component {
 
   renderProductPanel = (imgUrl, name, description, link) => (
     <div className="Products-body-panel">
-      <div className="col-xs-4">
-        <img src={imgUrl} className="Products-body-panel-image" alt={name} />
-      </div>
-      <div className="col-xs-8">
-        <h2> {name} </h2>
-        <p> {description} </p>
-        <a href={link} className="btn btn-danger"> Check </a>
+      <div className="row">
+        <div className="col-xs-4">
+          <img src={imgUrl} className="Products-body-panel-image" alt={name} />
+        </div>
+        <div className="col-xs-8">
+          <h2> {name} </h2>
+          <p> {description} </p>
+          <a href={link} className="btn btn-danger"> Check </a>
+        </div>
       </div>
     </div>
   );
 
-  renderNewsPanel = (imgUrl, date, description, link) => (
-    <div className="News-body-panel">
-      <div className="col-xs-3">
-        <img src={imgUrl} className="News-body-list-item-icon img-rounded" alt={date} />
+  renderNewsPanel = (imgUrl, date, description, link) => {
+    const iconImage = {
+      backgroundImage: `url(${imgUrl})`,
+    };
+    return (
+      <div className="News-body-panel">
+        <div className="row">
+          <div className="col-xs-1"></div>
+          <div className="col-xs-3">
+            <div className="News-body-list-item-icon Utility-img-rounded" style={iconImage}></div>
+          </div>
+          <div className="col-xs-8">
+            <h4 className="text-left News-body-list-item-date"> {date} </h4>
+            <p className="text-left News-body-list-item-description"> {description} </p>
+            <a href={link} className="btn btn-danger"> check </a>
+          </div>
+        </div>
       </div>
-      <div className="col-xs-9">
-        <h4 className="text-left News-body-list-item-date"> {date} </h4>
-        <p className="text-left News-body-list-item-description"> {description} </p>
-        <a href={link} className="btn btn-danger"> check </a>
-      </div>
-    </div>
-  );
+    )
+  };
 
   render() {
     return (
@@ -165,6 +175,30 @@ class App extends Component {
                 {this.renderSectionHeader("/map.png", "NEWS")}
                 <div className="News-body">
                   <ul className="News-body-list list-unstyled">
+                    <li className="News-body-list-item">
+                      {this.renderNewsPanel(
+                        "/hangai.png",
+                        "2017/8/29",
+                        "hogehogehogheoghoehgoehghohhogehogehogheoghoehgoehghohhogehogehogheoghoehgoehghohhogehogehogheoghoehgoehghola",
+                        "#"
+                       )}
+                    </li>
+                    <li className="News-body-list-item">
+                      {this.renderNewsPanel(
+                        "/hangai.png",
+                        "2017/8/29",
+                        "hogehogehogheoghoehgoehghohhogehogehogheoghoehgoehghohhogehogehogheoghoehgoehghohhogehogehogheoghoehgoehghola",
+                        "#"
+                       )}
+                    </li>
+                    <li className="News-body-list-item">
+                      {this.renderNewsPanel(
+                        "/hangai.png",
+                        "2017/8/29",
+                        "hogehogehogheoghoehgoehghohhogehogehogheoghoehgoehghohhogehogehogheoghoehgoehghohhogehogehogheoghoehgoehghola",
+                        "#"
+                       )}
+                    </li>
                     <li className="News-body-list-item">
                       {this.renderNewsPanel(
                         "/hangai.png",
