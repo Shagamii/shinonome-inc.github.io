@@ -9,22 +9,15 @@ class App extends Component {
         <header className="App-header">
           <div className="container">
             <nav className="navbar-left">
-              <img src={logo} className="App-logo" alt="logo" />
+              <img src={ logo } className="App-logo" alt="logo" />
             </nav>
             <nav className="navbar-right">
               <ul className="list list-unstyled list-inline">
-                <li>
-                  <a href="#mission">mission</a>
-                </li>
-                <li>
-                  <a href="#members">members</a>
-                </li>
-                <li>
-                  <a href="#news">news</a>
-                </li>
-                <li>
-                  <a href="#about">about</a>
-                </li>
+                <li> <a href="#mission">mission</a> </li>
+                <li> <a href="#members">members</a> </li>
+                <li> <a href="#products">products</a> </li>
+                <li> <a href="#news">news</a> </li>
+                <li> <a href="#about">about</a> </li>
               </ul>
             </nav>
           </div>
@@ -83,12 +76,39 @@ class App extends Component {
               <div className="col-xs-4"></div>
               <div className="col-xs-4"></div>
             </div>
-            <div className="row">
-              <div className="col-xs-4"></div>
-              <div className="col-xs-4"></div>
-              <div className="col-xs-4"></div>
-            </div>
           </section>
+          <sections id="products">
+            <div className="Products-header">
+              <h1 className="Products-header-title text-center">
+                PRODUCTS
+              </h1>
+            </div>
+            <div className="Products-body">
+              <div className="row">
+                <div className="col-xs-6">
+                  <div className="Products-body-panel">
+                    <div className="col-xs-4">
+                      <img src="/hangai.png" className="Products-body-panel-image" alt="hangai" />
+                    </div>
+                    <div className="col-xs-8">
+                      <h2>
+                        Unipro
+                      </h2>
+                      <p>
+                        hogehogehogeohgoehgoehgoeogheohgoehgoe
+                        hogehogehogeohgoehgoehgoeogheohgoehgoe
+                        hogehogehogeohgoehgoehgoeogheohgoehgoe
+                        hogehogehogeohgoehgoehgoeogheohgoehgoe
+                      </p>
+                      <a href="#" className="btn btn-danger">
+                        Check
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </sections>
           <sections id="news">
             <div className="News-header">
               <h1 className="News-header-title text-center">NEWS</h1>
@@ -120,23 +140,43 @@ class App extends Component {
             </div>
           </sections>
           <section id="about">
-            <h1>
-              企業概要
-            </h1>
-            <p>
-              社名: 株式会社Shinonome (Shinonome inc.)
-              代表者名: 種市隼兵
-              本社: 〒112-0005 東京都文京区水道１丁目5-16升本マンション802(自宅兼事務所)
-              設立: 2016年8月25日
-              資本金: 120万円
-              従業員数: 5名(役員) + 50名(業務委託契約者)
-            </p>
+            <div className="About-header">
+              <h1 className="About-header-title text-center">
+                About
+              </h1>
+            </div>
+            <div className="About-body">
+              <div className="row">
+                <dic className="col-xs-5">
+                  <p>
+                    会社名: 株式会社Shinonome(Shinonome inc.)
+                    設立日: 2016年8月25日
+                    資本金: 6,200,000円　
+                  </p>
+                  <img src={logo} className="App-logo" alt="logo" />
+                </dic>
+                <dic className="col-xs-3">
+                  <h2>役員</h2>
+                  <ul className="list list-unstyled">
+                    <li>CEO 種市</li>
+                    <li>CTO 高橋</li>
+                    <li>C0O 有馬</li>
+                  </ul>
+                </dic>
+                <dic className="col-xs-4">
+                  <p>
+                    所在地: &post; 112-0005
+                    東京都文京区水道1-5-16-802
+                  </p>
+                </dic>
+              </div>
+            </div>
           </section>
         </div>
         <footer className="App-footer">
-          <strong>
+          <p>
             &copy; 2016 Shinonome inc. All rights reserved
-          </strong>
+          </p>
         </footer>
       </div>
     );

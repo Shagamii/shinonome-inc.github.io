@@ -60,6 +60,22 @@ section {
   font-size: small;
 }
 
+.Products-header {
+  background-image: url(/hangai.png);
+  min-height: 150px;
+}
+
+.Products-body-panel {
+  background-color: #555A6C;
+  color: white;
+  height: 280px;
+}
+
+.Products-body-panel-image {
+  width: 160px;
+  height: 230px;
+}
+
 .News-header {
   background-image: url(/hangai.png);
   min-height: 150px;
