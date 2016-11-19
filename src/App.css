@@ -12,8 +12,11 @@
 }
 /*</utility>*/
 
+* {
+  box-sizing: border-box;
+}
+
 section {
-  min-height: 500px;
 }
 
 .App {
