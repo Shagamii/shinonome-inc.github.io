@@ -18,9 +18,17 @@ section {
   color: white;
 }
 
+.App-body {
+  background-color: #3C4257;
+}
+
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+
+.Section-header-title {
+  color: white;
 }
 
 .Member-panel {
@@ -39,7 +47,6 @@ section {
   margin: auto;
   width: 95px;
   height: auto;
-  padding: 2px;
 }
 
 .Member-panel-body-title {

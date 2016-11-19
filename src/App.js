@@ -5,7 +5,7 @@ import './App.css';
 class App extends Component {
   renderSectionHeader = (imgUrl, title) => {
     const style = {
-      backgroundImage: "url(/hangai.png)",
+      backgroundImage: `url(${imgUrl})`,
       minHeight: "150px"
     };
 
@@ -102,7 +102,7 @@ class App extends Component {
             </p>
           </section>
           <section id="members">
-            {this.renderSectionHeader("/hangai.png", "MEMBERS")}
+            {this.renderSectionHeader("/map.png", "MEMBERS")}
             <div className="row">
               <div className="col-xs-4">
                 {this.renderMemberPanel(
@@ -131,7 +131,7 @@ class App extends Component {
             </div>
           </section>
           <sections id="products">
-            {this.renderSectionHeader("/hangai.png", "PRODUCTS")}
+            {this.renderSectionHeader("/map.png", "PRODUCTS")}
             <div className="Products-body">
               <div className="row">
                 <div className="col-xs-6">
@@ -146,7 +146,7 @@ class App extends Component {
             </div>
           </sections>
           <sections id="news">
-            {this.renderSectionHeader("/hangai.png", "NEWS")}
+            {this.renderSectionHeader("/map.png", "NEWS")}
             <div className="News-body">
               <ul className="News-body-list list-unstyled">
                 <li className="News-body-list-item">
@@ -161,7 +161,7 @@ class App extends Component {
             </div>
           </sections>
           <section id="about">
-            {this.renderSectionHeader("/hangai.png", "ABOUT")}
+            {this.renderSectionHeader("/map.png", "ABOUT")}
             <div className="About-body">
               <ul className="list list-unstyled">
                 <li> 会社名: 株式会社Shinonome (Shinonome inc.) </li>
