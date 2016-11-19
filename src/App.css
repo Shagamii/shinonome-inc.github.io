@@ -31,38 +31,63 @@ section {
   color: white;
 }
 
+#mission {
+  color: white;
+}
+
 .Member-panel {
-  height: 370px;
+  height: 410px;
 }
 
 .Member-panel-body {
   background-image: url(/hangai.png);
-  background-color: rgba(61, 135, 135, 0.5);
+  background-position: center;
+  background-size: cover;
   color: white;
   height: 190px;
   padding-bottom: 10px;
+  position: relative;
+}
+
+.Member-panel-body:after {
+  display: block;
+  content: "";
+  position: absolute;
+  right: 0px;
+  left: 0px;
+  top: 0px;
+  bottom: 0px;
+  background-color: rgba(255,0,0,0.4);
 }
 
 .Member-panel-body-photo {
   margin: auto;
   width: 95px;
-  height: auto;
+  height: 95px;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  z-index: 5;
 }
 
 .Member-panel-body-title {
+  position: relative;
+  z-index: 5;
 }
 
 .Member-panel-body-description {
   margin-bottom: 0;
+  position: relative;
+  z-index: 5;
 }
 
 .Member-panel-footer {
-  height: 170px;
   background-color: #242933;
 }
 
 .Member-panel-footer-description {
-  padding: 10px;
+  padding: 24px;
+  box-sizing: border-box;
   color: white;
   font-size: small;
 }

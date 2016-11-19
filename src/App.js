@@ -16,18 +16,23 @@ class App extends Component {
     )
   };
 
-  renderMemberPanel = (imgUrl, name, jobTitle, description) => (
-    <div className="Member-panel">
-      <div className="Member-panel-body">
-        <img src={imgUrl} className="Member-panel-body-photo img-circle" alt={name} />
-        <h3 className="Member-panel-body-title"> {name} </h3>
-        <p className="Member-panel-body-description"> {jobTitle} </p>
+  renderMemberPanel = (imgUrl, name, jobTitle, description) => {
+    const iconimage = {
+      backgroundImage: `url(${imgUrl})`
+    };
+    return (
+      <div className="Member-panel">
+        <div className="Member-panel-body">
+          <div style={iconimage} className="Member-panel-body-photo img-circle" alt={name} ></div>
+          <h3 className="Member-panel-body-title"> {name} </h3>
+          <p className="Member-panel-body-description"> {jobTitle} </p>
+        </div>
+        <div className="Member-panel-footer">
+          <p className="Member-panel-footer-description text-left"> {description} </p>
+        </div>
       </div>
-      <div className="Member-panel-footer">
-        <p className="Member-panel-footer-description text-left"> {description} </p>
-      </div>
-    </div>
-  );
+    )
+  };
 
   renderProductPanel = (imgUrl, name, description, link) => (
     <div className="Products-body-panel">
