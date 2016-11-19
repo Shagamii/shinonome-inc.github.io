@@ -18,7 +18,7 @@
 
 @font-face {
   font-family: 'MyFont';
-  src: url(/public/font/corporate_logo.ttf);
+  src: url(./corporate_logo.ttf);
 }
 
 body {
