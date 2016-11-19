@@ -3,6 +3,60 @@ import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
+  renderSectionHeader = (imgUrl, title) => {
+    const style = {
+      backgroundImage: "url(/hangai.png)",
+      minHeight: "150px"
+    };
+
+    return (
+      <div className="Section-header" style={style}>
+        <h1 className="Section-header-title text-center">{title}</h1>
+      </div>
+    )
+  };
+
+  renderMemberPanel = (imgUrl, name, jobTitle, description) => (
+    <div className="Member-panel">
+      <div className="Member-panel-body">
+        <img src={imgUrl} className="Member-panel-body-photo img-circle" alt={name} />
+        <h3 className="Member-panel-body-title"> {name} </h3>
+        <p className="Member-panel-body-description"> {jobTitle} </p>
+      </div>
+      <div className="Member-panel-footer">
+        <p className="Member-panel-footer-description text-left">
+          {description}
+        </p>
+      </div>
+    </div>
+  );
+
+  renderProductPanel = (imgUrl, name, description, link) => (
+    <div className="Products-body-panel">
+      <div className="col-xs-4">
+        <img src={imgUrl} className="Products-body-panel-image" alt={name} />
+      </div>
+      <div className="col-xs-8">
+        <h2> {name} </h2>
+        <p> {description} </p>
+        <a href={link} className="btn btn-danger"> Check </a>
+      </div>
+    </div>
+  );
+
+  renderNewsPanel = (imgUrl, date, description, link) => (
+    <div className="News-body-panel">
+      <div className="col-xs-3">
+        <img src={imgUrl} className="News-body-list-item-icon img-rounded" alt={date} />
+      </div>
+      <div className="col-xs-9">
+        <h4 className="text-left News-body-list-item-date"> {date} </h4>
+        <p className="text-left News-body-list-item-description"> {description} </p>
+        <a href={link} className="btn btn-danger"> check </a>
+      </div>
+    </div>
+  );
+
   render() {
     return (
       <div className="App">
@@ -50,101 +104,52 @@ class App extends Component {
             </p>
           </section>
           <section id="members">
+            {this.renderSectionHeader("/hangai.png", "MEMBERS")}
             <div className="row">
               <div className="col-xs-4">
-                <div className="Member-panel">
-                  <div className="Member-panel-body">
-                    <img src="/hangai.png" className="Member-panel-body-photo img-circle" alt="hangai" />
-                    <h3 className="Member-panel-body-title">
-                      Seiichiro Hangai
-                    </h3>
-                    <p className="Member-panel-body-description">
-                      Outside Director
-                    </p>
-                  </div>
-                  <div className="Member-panel-footer">
-                    <p className="Member-panel-footer-description text-left">
-                      1975年東京理科大学工学部電気工学科卒，1981年同大学大学院理工学研究科博士課程了，工学博士。
-                      現在、東京理科大学理事ならびに工学部電気工学科教授。
-                      1996年～97年に在外研究員としてスタンフォード大学に滞在、2010年～2014年に工学部長。
-                      生体認証に関わるISO/IEC JTC1 SC37データフォーマットの国際標準化に貢献。
-                      文部科学省、人事院などの委員を歴任。
-                    </p>
-                  </div>
-                </div>
-              </div>
+                { this.renderMemberPanel(
+                  "/hangai.png",
+                  "Seiichiro Hangai",
+                  "Outside Director",
+                  "1975年東京理科大学工学部電気工学科卒，1981年同大学大学院理工学研究科博士課程了，工学博士。現在、東京理科大学理事ならびに工学部電気工学科教授。1996年～97年に在外研究員としてスタンフォード大学に滞在、2010年～2014年に工学部長。生体認証に関わるISO/IEC JTC1 SC37データフォーマットの国際標準化に貢献。文部科学省、人事院などの委員を歴任。"
+                )}
+               </div>
               <div className="col-xs-4"></div>
               <div className="col-xs-4"></div>
             </div>
           </section>
           <sections id="products">
-            <div className="Products-header">
-              <h1 className="Products-header-title text-center">
-                PRODUCTS
-              </h1>
-            </div>
+            {this.renderSectionHeader("/hangai.png", "PRODUCTS")}
             <div className="Products-body">
               <div className="row">
                 <div className="col-xs-6">
-                  <div className="Products-body-panel">
-                    <div className="col-xs-4">
-                      <img src="/hangai.png" className="Products-body-panel-image" alt="hangai" />
-                    </div>
-                    <div className="col-xs-8">
-                      <h2>
-                        Unipro
-                      </h2>
-                      <p>
-                        hogehogehogeohgoehgoehgoeogheohgoehgoe
-                        hogehogehogeohgoehgoehgoeogheohgoehgoe
-                        hogehogehogeohgoehgoehgoeogheohgoehgoe
-                        hogehogehogeohgoehgoehgoeogheohgoehgoe
-                      </p>
-                      <a href="#" className="btn btn-danger">
-                        Check
-                      </a>
-                    </div>
-                  </div>
+                  {this.renderProductPanel(
+                    "/hangai.png",
+                    "unipro",
+                    "hogehogehogheoghoehgoehghohhogehogehogheoghoehgoehghohhogehogehogheoghoehgoehghohhogehogehogheoghoehgoehghoh",
+                    "#"
+                  )}
                 </div>
               </div>
             </div>
           </sections>
           <sections id="news">
-            <div className="News-header">
-              <h1 className="News-header-title text-center">NEWS</h1>
-            </div>
+            {this.renderSectionHeader("/hangai.png", "NEWS")}
             <div className="News-body">
               <ul className="News-body-list list-unstyled">
                 <li className="News-body-list-item">
-                  <div className="row">
-                    <div className="col-xs-3">
-                      <img src="/hangai.png" className="News-body-list-item-icon img-rounded" alt="newes" />
-                    </div>
-                    <div className="col-xs-9">
-                      <h4 className="text-left News-body-list-item-date">
-                        date
-                      </h4>
-                      <p className="text-left News-body-list-item-description">
-                        hogehogehogeohgoehgoehgoeogheohgoehgoe
-                        hogehogehogeohgoehgoehgoeogheohgoehgoe
-                        hogehogehogeohgoehgoehgoeogheohgoehgoe
-                        gehoghoehgoehogc
-                      </p>
-                      <a href="#" className="btn btn-danger pull-right">
-                        check
-                      </a>
-                    </div>
-                  </div>
+                  {this.renderNewsPanel(
+                    "/hangai.png",
+                    "2017/8/29",
+                    "hogehogehogheoghoehgoehghohhogehogehogheoghoehgoehghohhogehogehogheoghoehgoehghohhogehogehogheoghoehgoehghola",
+                    "#"
+                   )}
                 </li>
               </ul>
             </div>
           </sections>
           <section id="about">
-            <div className="About-header">
-              <h1 className="About-header-title text-center">
-                About
-              </h1>
-            </div>
+            {this.renderSectionHeader("/hangai.png", "ABOUT")}
             <div className="About-body">
               <div className="row">
                 <dic className="col-xs-5">
