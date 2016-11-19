@@ -6,12 +6,15 @@ class App extends Component {
   renderSectionHeader = (imgUrl, title) => {
     const style = {
       backgroundImage: `url(${imgUrl})`,
-      minHeight: "150px"
     };
 
     return (
       <div className="Section-header" style={style}>
-        <h1 className="Section-header-title text-center">{title}</h1>
+        <div className="Utility-table">
+          <div className="Utility-table-cell">
+            <h1 className="Section-header-title text-center">{title}</h1>
+          </div>
+        </div>
       </div>
     )
   };
