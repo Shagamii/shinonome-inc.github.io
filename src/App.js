@@ -138,7 +138,7 @@ class App extends Component {
                </div>
             </div>
           </section>
-          <sections id="products">
+          <section id="products">
             {this.renderSectionHeader("/map.png", "PRODUCTS")}
             <div className="Products-body">
               <div className="row">
@@ -152,8 +152,8 @@ class App extends Component {
                 </div>
               </div>
             </div>
-          </sections>
-          <sections id="news">
+          </section>
+          <section id="news">
             {this.renderSectionHeader("/map.png", "NEWS")}
             <div className="News-body">
               <ul className="News-body-list list-unstyled">
@@ -167,7 +167,7 @@ class App extends Component {
                 </li>
               </ul>
             </div>
-          </sections>
+          </section>
           <section id="about">
             {this.renderSectionHeader("/map.png", "ABOUT")}
             <div className="About-body">
